@@ -15,7 +15,7 @@
     <div class="logo margin-big-left fadein-top">
         <h1>商学院后台管理中心</h1>
     </div>
-    <div class="head-l"><a class="button button-little bg-green" href="" target="_blank"><span class="icon-home"></span> 前台首页</a> &nbsp;&nbsp;<a href="##" class="button button-little bg-blue"><span class="icon-wrench"></span> 清除缓存</a> &nbsp;&nbsp;<a class="button button-little bg-red" href="{{route('loginout')}}"><span class="icon-power-off"></span> 退出登录</a> </div>
+    <div class="head-l">&nbsp;&nbsp;<a class="button button-little bg-red" href="{{route('loginout')}}"><span class="icon-power-off"></span> 退出登录</a> </div>
 </div>
 <div class="leftnav">
     <div class="leftnav-title"><strong><span class="icon-list"></span>菜单列表</strong></div>
@@ -28,10 +28,15 @@
         <li><a href="book.html" target="right"><span class="icon-caret-right"></span>留言管理</a></li>
         <li><a href="column.html" target="right"><span class="icon-caret-right"></span>栏目管理</a></li>
     </ul>
-    <h2><span class="icon-pencil-square-o"></span>分类管理</h2>
+    <h2><span class="icon-list"></span>分类管理</h2>
     <ul>
-        <li><a href="list.html" target="right"><span class="icon-caret-right"></span>分类列表</a></li>
-        <li><a href="{{route('category.create')}}" target="right"><span class="icon-caret-right"></span>添加分类</a></li>
+        <li><a href="{{route('category.index')}}"><span class="icon-caret-right"></span>分类列表</a></li>
+        <li><a href="{{route('category.create')}}"><span class="icon-caret-right"></span>添加分类</a></li>
+    </ul>
+    <h2><span class="icon-pencil-square-o"></span>文章管理</h2>
+    <ul>
+        <li><a href="{{route('article.index')}}"><span class="icon-caret-right"></span>文章列表</a></li>
+        <li><a href="{{route('article.create')}}"><span class="icon-caret-right"></span>添加文章</a></li>
     </ul>
 </div>
 <script type="text/javascript">

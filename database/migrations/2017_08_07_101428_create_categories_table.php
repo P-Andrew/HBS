@@ -20,7 +20,7 @@ class CreateCategoriesTable extends Migration {
       $table->increments('id');
       $table->integer('parent_id')->nullable()->index();
       $table->string('name',255);
-      $table->integer('order')->unsigned()->nullable();
+      $table->string('desc')->nullable();
       $table->string('icon',100);
       $table->integer('lft')->nullable()->index();
       $table->integer('rgt')->nullable()->index();

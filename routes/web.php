@@ -19,6 +19,7 @@ Route::group(['namespace'=>'Admin'],function(){
         Route::get('index','IndexController@index')->name('index');
         Route::get('loginout','LoginController@loginOut')->name('loginout');
         Route::resource('category','CategoryController');
+        Route::resource('article','ArticleController');
     });
 });
 
