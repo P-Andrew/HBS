@@ -27,7 +27,7 @@
                     <td>{{$item->share_gift}}</td>
                     <td>@if($item->is_recommend==0)否@else是@endif</td>
                     <td>{{$item->order}}</td>
-                    <td><div class="button-group"><a class="button border-red" href="{{route('form.index',['article'=>$item->id])}}"><span class="icon-edit"></span>添加附件</a><a class="button border-main" href="{{route('article.edit',['article'=>$item->id])}}"><span class="icon-edit"></span> 修改</a> <a class="button border-red" href="javascript:void(0)" onclick="return del('{{$item->id}}')"><span class="icon-trash-o"></span> 删除</a> </div></td>
+                    <td><div class="button-group"><a class="button border-red" href="{{route('attach.index',['article'=>$item->id])}}"><span class="icon-edit"></span>添加附件</a><a class="button border-main" href="{{route('article.edit',['article'=>$item->id])}}"><span class="icon-edit"></span> 修改</a> <a class="button border-red" href="javascript:void(0)" onclick="return del('{{$item->id}}')"><span class="icon-trash-o"></span> 删除</a> </div></td>
                 </tr>
             @endforeach
         </table>

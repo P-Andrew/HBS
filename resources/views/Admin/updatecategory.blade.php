@@ -52,7 +52,7 @@
                         <label>分类排序：</label>
                     </div>
                     <div class="field">
-                        <input type="text" class="input w50" name="order" value="{{old('order')??$category->order}}"  />
+                        <input type="text" class="input w50" name="desc" value="{{old('desc')??$category->desc}}"  />
                         <div class="tips"></div>
                     </div>
                 </div>

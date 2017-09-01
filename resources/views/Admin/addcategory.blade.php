@@ -44,10 +44,10 @@
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>排序：</label>
+                        <label>分类描述：</label>
                     </div>
                     <div class="field">
-                        <input type="text" class="input w50" name="sort" value="0"  data-validate="number:排序必须为数字" />
+                        <input type="text" class="input w50" name="desc"  />
                         <div class="tips"></div>
                     </div>
                 </div>

@@ -20,7 +20,8 @@ Route::group(['namespace'=>'Admin'],function(){
         Route::get('loginout','LoginController@loginOut')->name('loginout');
         Route::resource('category','CategoryController');
         Route::resource('article','ArticleController');
-        Route::resource('{article}/form','FormController');
+        Route::resource('{article}/attach','AttachController');
+        Route::resource('{attach}/question','QuestionController');
     });
 });
 

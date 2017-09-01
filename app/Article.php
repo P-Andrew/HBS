@@ -17,4 +17,8 @@ class Article extends Model
     {
         return $this->belongsToMany('App\Keywords','article_keywords','article_id','keywords_id');
     }
+
+    public function Attach(){
+        return $this->hasMany('App\Attach','article_id');
+    }
 }

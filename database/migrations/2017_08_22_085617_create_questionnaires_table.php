@@ -18,7 +18,7 @@ class CreateQuestionnairesTable extends Migration
             $table->increments('id');
             $table->string('name',50);
             $table->integer('article_id')->unsigned()->nullable()->index();
-            $table->string('desc');
+            $table->longText('desc');
             $table->boolean('is_sale');
             $table->float('price',10,2)->nullable();
             $table->float('cash_back',10,2)->nullable();

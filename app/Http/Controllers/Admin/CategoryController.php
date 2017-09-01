@@ -38,7 +38,7 @@ class CategoryController extends Controller
             $url = trim(str_replace($_SERVER['DOCUMENT_ROOT'], '', $path));
         }
         if ($request['pid'] == null) {
-            Category::create(['name' => $request['title'], 'order' => $request['sort'], 'icon' => $url]);
+            Category::create(['name' => $request['title'], 'desc' => $request['desc'], 'icon' => $url]);
         } else {
             $category = Category::find($request['pid']);
             $category->children()->create(['name' => $request['title'], 'order' => $request['sort'], 'icon' => $url]);
@@ -69,7 +69,7 @@ class CategoryController extends Controller
             $url = $request['img'];
         }
         $cate = Category::find($category);
-        $cate->update(['name'=>$request['title'],'icon'=>$url,'order'=>$request['order']]);
+        $cate->update(['name'=>$request['title'],'icon'=>$url,'desc'=>$request['desc']]);
         return redirect('category');
     }
     public function destroy($category)
