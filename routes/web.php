@@ -25,6 +25,11 @@ Route::group(['namespace'=>'Admin'],function(){
     });
 });
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['namespace'=>'Home'],function(){
+
+    Route::get('/','IndexController@index')->name('home');
+    Route::get('detail/{article}','ArticleController@detail')->name('detail');
+
 });
+
+
