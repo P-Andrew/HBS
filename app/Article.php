@@ -21,4 +21,8 @@ class Article extends Model
     public function Attach(){
         return $this->hasMany('App\Attach','article_id');
     }
+
+    public function Comment(){
+        return $this->hasMany('App\Comment','article_id');
+    }
 }

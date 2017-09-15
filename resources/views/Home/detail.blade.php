@@ -19,6 +19,10 @@
         .detail-article{margin:.6rem auto;padding:0 .1rem;color:#000;font-size:.32rem;word-spacing:.03rem;letter-spacing:.03rem;justify-content:flex-start}
         .detail-aside p{margin-top:.1rem;color:#8f8f8f;}
         .detail-article img[src ^= '/upload/']{width:100%}
+        .detail-form{width:100%;font-size:.3rem;border:1px solid #b2b2b2;padding:.4rem;border-radius:.1rem;}
+        .detail-form ul  li{text-align:center;display:block;height:1rem;line-height:1rem;border:1px solid #b2b2b2;padding:0 .5rem;margin:.2rem .1rem;border-radius:.5rem;}
+        .detail-form ul li:first-child{margin-top:.5rem;}
+        .detail-form p{text-align:center;margin-top:-.65rem;}
     </style>
 </head>
 <body>
@@ -37,31 +41,35 @@
     <article class="detail-article">
        {!!$detail->content!!}
     </article>
-    
-</div>
+    <div class="detail-form">
+        <p><i style="background:#ffffff">&nbsp;内容相关&nbsp;</i></p>
+        <ul>
+            @foreach($detail->Attach as $attach)
+                <a href="{{route('question', ['attach'=>$attach->id])}}"><li>{{$attach->name}}</li></a>
+            @endforeach
+        </ul>
+    </div>
+    <div class="detail-comment">
+        <form action="">
 
+        </form>
+    </div>
+</div>
 <footer class="m-tabbar tabbar-fixed">
     <a href="#" class="tabbar-item tabbar-active">
             <span class="tabbar-icon">
-                <i class="icon-home"></i>
+               <i class="icon-good"></i>
             </span>
-        <span class="tabbar-txt">首页</span>
+        <span class="tabbar-txt">20</span>
     </a>
-    <a href="#" class="tabbar-item">
+    <a href="{{route('comment',['article'=>$detail->id])}}" class="tabbar-item">
             <span class="tabbar-icon">
-                <i class="icon-shopcart-outline"></i>
+               <i class="icon-feedback"></i>
             </span>
-        <span class="tabbar-txt">购物车</span>
-    </a>
-    <a href="#" class="tabbar-item">
-            <span class="tabbar-icon">
-                <i class="icon-ucenter-outline"></i>
-            </span>
-        <span class="tabbar-txt">个人中心</span>
+        <span class="tabbar-txt">11</span>
     </a>
 </footer>
 <script src="{{asset('js/jquery.js')}}"></script>
-
 <script src="{{asset('ydui/js/ydui.js')}}"></script>
 </body>
 </html>

@@ -29,6 +29,9 @@ Route::group(['namespace'=>'Home'],function(){
 
     Route::get('/','IndexController@index')->name('home');
     Route::get('detail/{article}','ArticleController@detail')->name('detail');
+    Route::get('question/{attach}','ArticleController@question')->name('question');
+    Route::get('comment/{article}','CommentController@index')->name('comment');
+    Route::post('commit','CommentController@store')->name('commit');
 
 });
 
